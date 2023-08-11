@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HandTag: HandTag
-  URL: Discord.gg/QjWFv3aDzt
+  URL: https://discord.com/invite/QjWFv3aDzt
 --- !u!4 &270150822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 430285557067231375, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
@@ -659,6 +659,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 89681c510a2d4144f82986df469f44a1, type: 2}
     - target: {fileID: 430285557067231374, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 430285557067231374, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
       propertyPath: m_TagString
       value: HandTag
       objectReference: {fileID: 0}
@@ -721,6 +725,10 @@ PrefabInstance:
     - target: {fileID: 430285557273465591, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430285557680239484, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 430285557680239484, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
       propertyPath: m_TagString
@@ -1373,7 +1381,7 @@ GameObject:
   - component: {fileID: 1391400356}
   - component: {fileID: 1391400355}
   - component: {fileID: 1391400354}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FingerCollider
   m_TagString: HandTag
   m_Icon: {fileID: 0}
@@ -1817,7 +1825,7 @@ GameObject:
   - component: {fileID: 1870358860}
   - component: {fileID: 1870358859}
   - component: {fileID: 1870358858}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FingerCollider
   m_TagString: HandTag
   m_Icon: {fileID: 0}

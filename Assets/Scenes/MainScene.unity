@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 803316247}
   - component: {fileID: 803316246}
   - component: {fileID: 803316245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FingerCollider
   m_TagString: HandTag
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   - component: {fileID: 1100559642}
   - component: {fileID: 1100559641}
   - component: {fileID: 1100559640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FingerCollider
   m_TagString: HandTag
   m_Icon: {fileID: 0}
@@ -857,6 +857,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 430285557067231374, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 430285557067231374, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
       propertyPath: m_TagString
       value: HandTag
       objectReference: {fileID: 0}
@@ -911,6 +915,10 @@ PrefabInstance:
     - target: {fileID: 430285557519011101, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 430285557680239484, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 430285557680239484, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
       propertyPath: m_TagString
