@@ -1543,7 +1543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Discord
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e7fc72865da1649abbe93d9c12e04cef, type: 2}
   m_sharedMaterial: {fileID: 8694931404081403558, guid: e7fc72865da1649abbe93d9c12e04cef, type: 2}
