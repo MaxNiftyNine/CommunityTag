@@ -139,7 +139,7 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: -7835656814152736080, guid: e592d543fd42b4c97a11ac8d978280ca, type: 2}
-  - {fileID: 11400000, guid: 88f5c95ad08be47b89b7d80988814229, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: eb84867302ed045349bae371346a3123, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -415,7 +415,7 @@ PlayerSettings:
   - m_BuildTarget: iOSSupport
     m_GraphicsJobs: 0
   - m_BuildTarget: WindowsStandaloneSupport
-    m_GraphicsJobs: 1
+    m_GraphicsJobs: 0
   - m_BuildTarget: XboxOnePlayer
     m_GraphicsJobs: 1
   - m_BuildTarget: LuminSupport
@@ -442,6 +442,9 @@ PlayerSettings:
   - m_BuildTarget: WebGLSupport
     m_APIs: 0b000000
     m_Automatic: 1
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 02000000
+    m_Automatic: 0
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 0
