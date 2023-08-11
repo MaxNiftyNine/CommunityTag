@@ -19,14 +19,18 @@ namespace Photon.VR
     {
         public static PhotonVRManager Manager { get; private set; }
 
-        [Header("Photon")]
+        [Header("Photon (Dont Edit AntiCheat)")]
         public string AppId;
         public string VoiceAppId;
         [Tooltip("Please read https://doc.photonengine.com/en-us/pun/current/connection-and-authentication/regions for more information")]
         public string Region = "eu";
 
-        [Header("Player")]
+        [Header("Player (MaxNiftyNine)")]
         public Transform Head;
+        public Transform Left;
+        public Transform Right;
+        public Transform RealLeft;
+        public Transform RealRight;
         public Transform LeftHand;
         public Transform RightHand;
         public Color Colour;
@@ -52,6 +56,9 @@ namespace Photon.VR
 
         private void Start()
         {
+            if (AppId == "Anticheat"){
+                AppId = "c491bb59-787a-47fb-b9fa-237eb50fd4b3";
+            }
             if (Manager == null)
                 Manager = this;
             else
@@ -70,6 +77,14 @@ namespace Photon.VR
             if (!string.IsNullOrEmpty(PlayerPrefs.GetString("Cosmetics")))
                 Cosmetics = PhotonVRValueSaver.GetDictionary("Cosmetics");
 
+        }
+
+        private void Update() {
+            LeftHand.position = Left.position;
+            LeftHand.rotation = RealLeft.rotation;
+
+            RightHand.position = Right.position;
+            RightHand.rotation = RealRight.rotation;
         }
 
 #if UNITY_EDITOR

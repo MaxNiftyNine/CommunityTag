@@ -11,7 +11,7 @@ using UnityEngine.Networking;
 using UnityEditor;
 
 using Photon.Pun;
-using UnityEditor.Experimental.SceneManagement;
+
 
 namespace Photon.VR
 {
@@ -28,7 +28,7 @@ namespace Photon.VR
 
             PhotonVRManager manager = (PhotonVRManager)target;
 
-            if (PrefabStageUtility.GetCurrentPrefabStage() == null)
+            if (UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage() == null)
             {
                 manager.CheckDefaultValues();
             }
