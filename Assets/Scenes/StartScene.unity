@@ -314,6 +314,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HandTag: HandTag
   URL: Discord.gg/QjWFv3aDzt
+--- !u!1 &270150820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 430285557067231374, guid: ce5c2251d70caf148bbad13bb99ebf54, type: 3}
+  m_PrefabInstance: {fileID: 795443546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &270150822
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270150820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.06
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &390599682
 GameObject:
   m_ObjectHideFlags: 0
