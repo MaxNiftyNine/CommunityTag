@@ -22,13 +22,25 @@ public class ChangeCosmetic : MonoBehaviour
         Model
     }
 
+    public CosmeticType cosmeticType;
     private void Start() {
-        
+        if ((PlayerPrefs.GetInt(cosmeticType + " " + Cosmetic + " Pressed", 0)) == 1){
+            Pressed = true;
+        }
+        else{
+            Pressed = false;
+        }
     }
     private void Update(){
-        
+    if (Pressed && ((PlayerPrefs.GetInt(cosmeticType + " " + Cosmetic + " Pressed", 0)) == 0)){
+        PlayerPrefs.SetInt(cosmeticType + " " + Cosmetic + " Pressed", 1);
     }
-    public CosmeticType cosmeticType;
+    else if (!Pressed && ((PlayerPrefs.GetInt(cosmeticType + " " + Cosmetic + " Pressed", 0)) == 1))
+    {
+        PlayerPrefs.SetInt(cosmeticType + " " + Cosmetic + " Pressed", 0);
+    }
+}
+
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == HandTag) {
