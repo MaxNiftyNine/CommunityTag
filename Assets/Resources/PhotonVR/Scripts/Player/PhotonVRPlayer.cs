@@ -98,7 +98,7 @@ namespace Photon.VR.Player
             Dictionary<string, string> cosmetics = (Dictionary<string, string>)photonView.Owner.CustomProperties["Cosmetics"];
             foreach (KeyValuePair<string, string> cosmetic in cosmetics)
             {
-                Debug.Log(cosmetic.Key);
+                
                 foreach (CosmeticSlot slot in CosmeticSlots)
                 {
                     if (slot.SlotName == cosmetic.Key)
