@@ -42,10 +42,7 @@ public class OculusSampleFrameworkUtil
 #if UNITY_2017_2_OR_NEWER
     private static void HandlePlayModeState(PlayModeStateChange state)
     {
-        if (state == PlayModeStateChange.EnteredPlayMode)
-        {
-            OVRPlugin.SendEvent("load", OVRPlugin.wrapperVersion.ToString(), "sample_framework");
-        }
+        
     }
 #endif
 }

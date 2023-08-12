@@ -12,7 +12,7 @@ public class ChangeScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.tag == HandTag) {
-            GameObject rig = FindObjectOfType<UnityEngine.XR.Interaction.Toolkit.XRRig>().gameObject;
+            GameObject rig = FindObjectOfType<Unity.XR.CoreUtils.XROrigin>().gameObject;
             if (KeepRig) {
                 DontDestroyOnLoad(rig);
             }

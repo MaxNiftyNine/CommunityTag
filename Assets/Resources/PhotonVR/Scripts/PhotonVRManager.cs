@@ -170,7 +170,7 @@ namespace Photon.VR
             PhotonNetwork.PhotonServerSettings.AppSettings.AppIdVoice = Manager.VoiceAppId;
             PhotonNetwork.PhotonServerSettings.AppSettings.FixedRegion = Manager.Region;
             PhotonNetwork.ConnectUsingSettings();
-            Debug.Log($"Connecting - AppId: {PhotonNetwork.PhotonServerSettings.AppSettings.AppIdRealtime} VoiceAppId: {PhotonNetwork.PhotonServerSettings.AppSettings.AppIdVoice}");
+            Debug.Log("Connecting");
             return true;
         }
 
@@ -196,7 +196,7 @@ namespace Photon.VR
             PhotonNetwork.PhotonServerSettings.AppSettings.AppIdVoice = Manager.VoiceAppId;
             PhotonNetwork.PhotonServerSettings.AppSettings.FixedRegion = Manager.Region;
             PhotonNetwork.ConnectUsingSettings();
-            Debug.Log($"Connecting - AppId: {PhotonNetwork.PhotonServerSettings.AppSettings.AppIdRealtime} VoiceAppId: {PhotonNetwork.PhotonServerSettings.AppSettings.AppIdVoice}");
+            Debug.Log("Connecting");
             return true;
         }
 

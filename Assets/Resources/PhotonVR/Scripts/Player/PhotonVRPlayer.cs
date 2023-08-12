@@ -17,6 +17,7 @@ namespace Photon.VR.Player
         public Transform RightHand;
         [Tooltip("The objects that will get the colour of the player applied to them")]
         public List<MeshRenderer> ColourObjects;
+        public List<MeshRenderer> InvertedColourObjects;
 
         [Space]
         [Tooltip("Feel free to add as many slots as you feel necessary")]
@@ -82,6 +83,16 @@ namespace Photon.VR.Player
                 if(renderer != null)
                     renderer.material.color = JsonUtility.FromJson<Color>((string)photonView.Owner.CustomProperties["Colour"]);
             }
+            foreach (MeshRenderer renderer in InvertedColourObjects)
+{
+    if(renderer != null)
+    {
+        Color originalColor = JsonUtility.FromJson<Color>((string)photonView.Owner.CustomProperties["Colour"]);
+        Color invertedColor = new Color(1f - originalColor.r, 1f - originalColor.g, 1f - originalColor.b, originalColor.a); //Preserving alpha value
+        renderer.material.color = invertedColor;
+    }
+}
+
 
             // Cosmetics - it's a little ugly to look at
             Dictionary<string, string> cosmetics = (Dictionary<string, string>)photonView.Owner.CustomProperties["Cosmetics"];
