@@ -6,6 +6,7 @@ using easyInputs;
 [RequireComponent(typeof(Rigidbody))]
 public class Grabbable : MonoBehaviour
 {
+    // hey max here, made this script for snowballerr but it might be useful here (note: not networked)
     public LayerMask[] HandLayers;
     public GameObject LeftHand;
     public GameObject RightHand;
