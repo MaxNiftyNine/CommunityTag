@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.VR;
 using Photon.VR.Saving;
-
+using TMPro;
 
 public class ChangeCosmetic : MonoBehaviour
 {
@@ -12,6 +12,9 @@ public class ChangeCosmetic : MonoBehaviour
     private bool Pressed = false;
     public Color PressedColor = Color.red;
     public Color UnpressedColor = Color.white;
+
+    public TextMeshPro EnabledText;
+
     public enum CosmeticType
     {
         LeftHand,
@@ -23,30 +26,40 @@ public class ChangeCosmetic : MonoBehaviour
     }
 
     public CosmeticType cosmeticType;
-    private void Start() {
-        if ((PlayerPrefs.GetInt(cosmeticType + " " + Cosmetic + " Pressed", 0)) == 1){
+   
+    private void Update(){
+        if (cosmeticType != CosmeticType.Model){
+        if (PhotonVRManager.GetCosmetic(cosmeticType.ToString()) == Cosmetic){
+            
+            Pressed = true;
+        }
+        else{
+            Pressed = false;
+        }}
+        else {
+            if (PhotonVRManager.GetCosmetic("HeadModel") == Cosmetic || PhotonVRManager.GetCosmetic("BodyModel") == Cosmetic){
+            
             Pressed = true;
         }
         else{
             Pressed = false;
         }
+        }
+        if (Pressed){
+            EnabledText.text = "Disable";
+            GetComponent<Renderer>().material.color = PressedColor;
+        }
+        else{
+            EnabledText.text = "Enable";
+            GetComponent<Renderer>().material.color = UnpressedColor;
+        }
     }
-    private void Update(){
-    if (Pressed && ((PlayerPrefs.GetInt(cosmeticType + " " + Cosmetic + " Pressed", 0)) == 0)){
-        PlayerPrefs.SetInt(cosmeticType + " " + Cosmetic + " Pressed", 1);
-    }
-    else if (!Pressed && ((PlayerPrefs.GetInt(cosmeticType + " " + Cosmetic + " Pressed", 0)) == 1))
-    {
-        PlayerPrefs.SetInt(cosmeticType + " " + Cosmetic + " Pressed", 0);
-    }
-}
 
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == HandTag) {
             if (Pressed){
                 Pressed = false;
-                GetComponent<Renderer>().material.color = UnpressedColor;
                 switch(cosmeticType)
             {
                 case CosmeticType.LeftHand:
@@ -75,8 +88,7 @@ public class ChangeCosmetic : MonoBehaviour
             }
             else{
                 Pressed = true;
-                GetComponent<Renderer>().material.color = PressedColor;
-            switch(cosmeticType)
+                switch(cosmeticType)
             {
                 
                 case CosmeticType.LeftHand:

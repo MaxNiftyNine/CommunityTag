@@ -56,7 +56,8 @@ namespace Photon.VR
 
         private void Start()
         {
-            if (AppId == "Anticheat"){
+            if (AppId == "Anticheat")
+            {
                 AppId = "c491bb59-787a-47fb-b9fa-237eb50fd4b3";
             }
             if (Manager == null)
@@ -79,7 +80,8 @@ namespace Photon.VR
 
         }
 
-        private void Update() {
+        private void Update()
+        {
             LeftHand.position = Left.position;
             LeftHand.rotation = RealLeft.rotation;
 
@@ -427,6 +429,14 @@ namespace Photon.VR
         public string CreateRoomCode()
         {
             return new System.Random().Next(99999).ToString();
+        }
+        public static string GetCosmetic(string cosmeticType)// Gets name of current cosmetic in a slot
+        {
+            if (Manager.Cosmetics.ContainsKey(cosmeticType))
+            {
+                return Manager.Cosmetics[cosmeticType];
+            }
+            return null;
         }
     }
 
