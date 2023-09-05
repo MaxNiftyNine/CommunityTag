@@ -22,13 +22,15 @@ public class ChangeCosmetic : MonoBehaviour
         Head,
         Face,
         Body,
-        Model
+        HeadModel,
+        BodyModel,
+        BothModels
     }
 
     public CosmeticType cosmeticType;
    
     private void Update(){
-        if (cosmeticType != CosmeticType.Model){
+        if (cosmeticType != CosmeticType.BothModels){
         if (PhotonVRManager.GetCosmetic(cosmeticType.ToString()) == Cosmetic){
             
             Pressed = true;
@@ -77,7 +79,14 @@ public class ChangeCosmetic : MonoBehaviour
                 case CosmeticType.Body:
                     PhotonVRManager.SetCosmetic("Body", "");
                     break;
-                case CosmeticType.Model:
+                case CosmeticType.HeadModel:
+                    PhotonVRManager.SetCosmetic("HeadModel", "");
+                    break;
+                case CosmeticType.BodyModel:
+                    PhotonVRManager.SetCosmetic("BodyModel", "");
+                    break;
+                
+                case CosmeticType.BothModels:
                     PhotonVRManager.SetCosmetic("HeadModel", "");
                     PhotonVRManager.SetCosmetic("BodyModel", "");
                     break;
@@ -106,7 +115,14 @@ public class ChangeCosmetic : MonoBehaviour
                 case CosmeticType.Body:
                     PhotonVRManager.SetCosmetic("Body", Cosmetic);
                     break;
-                case CosmeticType.Model:
+                case CosmeticType.HeadModel:
+                    PhotonVRManager.SetCosmetic("HeadModel", Cosmetic);
+                    break;
+                case CosmeticType.BodyModel:
+                    PhotonVRManager.SetCosmetic("BodyModel", Cosmetic);
+                    break;
+                
+                case CosmeticType.BothModels:
                     PhotonVRManager.SetCosmetic("HeadModel", Cosmetic);
                     PhotonVRManager.SetCosmetic("BodyModel", Cosmetic);
                     break;
