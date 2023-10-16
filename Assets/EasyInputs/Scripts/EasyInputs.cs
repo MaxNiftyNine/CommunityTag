@@ -211,7 +211,8 @@ namespace easyInputs
     public enum EasyHand
     {
         LeftHand,
-        RightHand
+        RightHand,
+        NoHand
     }
 }
 
